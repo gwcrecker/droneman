@@ -23,9 +23,8 @@ namespace Game1
             PlayGame,
             EndGame
         }
-        GamePadState state = GamePadState.MainMenu;
+        //GamePadState state = GamePadState.MainMenu;
 
-        Vector2 dronePosition;
 
         public Game1()
         {
