@@ -23,7 +23,7 @@ namespace Game1
             PlayGame,
             EndGame
         }
-        //GamePadState state = GamePadState.MainMenu;
+        //GamePadState state = GamePadState.MainMenu
 
 
         public Game1()
