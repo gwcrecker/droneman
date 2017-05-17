@@ -35,7 +35,7 @@ namespace Game1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            droneSprite = Content.Load<Texture2D>("drone");
+            droneSprite = this.Content.Load<Texture2D>("drone");
 
         }
 
@@ -61,7 +61,7 @@ namespace Game1
             GraphicsDevice.Clear(Color.LemonChiffon );
 
             // TODO: Add your drawing code here
-            //spriteBatch.Draw(droneSprite,dronePosition, Color.White); 
+            spriteBatch.Draw(droneSprite,dronePosition, Color.White); 
             base.Draw(gameTime);
         }
     }
