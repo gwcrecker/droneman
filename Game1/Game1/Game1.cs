@@ -14,7 +14,9 @@ namespace Game1
 
         //add all rectangles, Texture2D, and variables here
 
-        
+        Texture2D droneSprite;
+        Vector2 dronePosition
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -26,12 +28,14 @@ namespace Game1
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            dronePosition = new Vector2(100, 199);
         }
 
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            droneSprite = Content.Load<Texture2D>("drone");
 
         }
 
@@ -54,10 +58,10 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.IndianRed);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            //spriteBatch.Draw(droneSprite,dronePosition, Color.White); HEY THIS DOESNT WORK HELP
             base.Draw(gameTime);
         }
     }
