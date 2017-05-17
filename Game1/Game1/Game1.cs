@@ -15,7 +15,7 @@ namespace Game1
         //add all rectangles, Texture2D, and variables here
 
         Texture2D droneSprite;
-        Vector2 dronePosition
+        Vector2 dronePosition;
 
         public Game1()
         {
