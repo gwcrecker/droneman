@@ -15,7 +15,10 @@ namespace Game1
         //add all rectangles, Texture2D, and variables here
 
         Texture2D droneSprite;
+
         Vector2 dronePosition;
+
+        SpriteFont font1;
 
         enum GameState
         {
@@ -47,6 +50,9 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             droneSprite = Content.Load<Texture2D>("drone");
 
+
+            //fonts
+            font1 = Content.Load<SpriteFont>("font1");
         }
 
         protected override void UnloadContent()
@@ -74,7 +80,10 @@ namespace Game1
             GraphicsDevice.Clear(Color.LemonChiffon );
 
             // TODO: Add your drawing code here
-            spriteBatch.Draw(droneSprite,dronePosition, Color.White); 
+            spriteBatch.Draw(droneSprite,dronePosition, Color.White);
+
+            spriteBatch.DrawString(font1, "Sponsored by Recker Aerial Images, LLC", new Vector2(400, 50), Color.Black);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }
