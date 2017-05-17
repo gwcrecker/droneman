@@ -25,8 +25,6 @@ namespace Game1
         }
         GamePadState state = GamePadState.MainMenu;
 
-        Vector2 dronePosition;
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
