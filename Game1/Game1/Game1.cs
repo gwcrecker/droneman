@@ -15,7 +15,15 @@ namespace Game1
         //add all rectangles, Texture2D, and variables here
 
         Texture2D droneSprite;
-        Vector2 dronePosition
+        Vector2 dronePosition;
+
+        enum GameState
+        {
+            MainMenu,
+            PlayGame,
+            EndGame
+        }
+        GamePadState state = GamePadState.MainMenu;
 
         public Game1()
         {
@@ -49,6 +57,8 @@ namespace Game1
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+           // GameState.MainMenu;
 
             // TODO: Add your update logic here
 
