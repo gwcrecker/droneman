@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;    
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -17,9 +18,18 @@ namespace Game1
         Texture2D droneSprite;
         Vector2 dronePosition;
 
+        Vector2 dronePosition;
+        Vector2 droneSpeed;
+        
+
+        SpriteFont font1;
+
+       
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -37,6 +47,9 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             droneSprite = Content.Load<Texture2D>("drone");
 
+
+            //fonts
+            font1 = Content.Load<SpriteFont>("font1");
         }
 
         protected override void UnloadContent()
@@ -47,8 +60,10 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+
+
+            // TODO: Add your update logic here
+            // GameState.MainMenu;
 
             // TODO: Add your update logic here
 
@@ -58,11 +73,22 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            GraphicsDevice.Clear(Color.LemonChiffon );
 
             // TODO: Add your drawing code here
-            //spriteBatch.Draw(droneSprite,dronePosition, Color.White); HEY THIS DOESNT WORK HELP
+            
+
+
+
+            spriteBatch.Draw(droneSprite,dronePosition, Color.White);
+
+           
+
+            spriteBatch.End();
             base.Draw(gameTime);
         }
+
+      
     }
 }
