@@ -17,8 +17,6 @@ namespace Game1
 
         Texture2D droneSprite;
         Vector2 dronePosition;
-
-        Vector2 dronePosition;
         Vector2 droneSpeed;
 
 
@@ -70,7 +68,7 @@ namespace Game1
 
 
             // TODO: Add your update logic here
-           // GameState.MainMenu;
+            // GameState.MainMenu;
 
             // TODO: Add your update logic here
 
@@ -81,10 +79,10 @@ namespace Game1
         protected override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
-            GraphicsDevice.Clear(Color.LemonChiffon );
+            GraphicsDevice.Clear(Color.LemonChiffon);
 
             // TODO: Add your drawing code here
-            
+
             switch (state)
             {
                 case GameState.MainMenu:
@@ -101,9 +99,9 @@ namespace Game1
             }
 
 
-            spriteBatch.Draw(droneSprite,dronePosition, Color.White);
+            spriteBatch.Draw(droneSprite, dronePosition, Color.White);
 
-           
+
 
             spriteBatch.End();
             base.Draw(gameTime);
@@ -125,3 +123,4 @@ namespace Game1
 
         }
     }
+}
