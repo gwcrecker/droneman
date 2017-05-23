@@ -37,7 +37,7 @@ namespace Game1
             // TODO: Add your initialization logic here
 
             base.Initialize();
-            dronePosition = new Vector2(100, 199);
+            dronePosition = new Vector2(1000, 500);
         }
 
         protected override void LoadContent()
