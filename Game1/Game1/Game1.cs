@@ -20,7 +20,7 @@ namespace Game1
         Vector2 droneYSpeed;
         Vector2 gravity;
         Vector2 droneXSpeed;
-    
+
 
 
 
