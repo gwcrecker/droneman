@@ -72,6 +72,9 @@ namespace Game1
 
             Rectangle DroneCollision1 = new Rectangle((int)dronePosition.X, (int)dronePosition.Y, droneSprite.Width, droneSprite.Height);
             Rectangle DroneCollision2 = new Rectangle((int)dronePosition.X + droneSprite.Width/2, (int)dronePosition.Y +5, droneSprite.Width-10, droneSprite.Height- 30);
+            dronePosition.Y += gravity.Y;
+
+            
             // TODO: Add your update logic here
             // GameState.MainMenu;
 
