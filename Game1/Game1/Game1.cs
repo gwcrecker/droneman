@@ -71,6 +71,16 @@ namespace Game1
             // GameState.MainMenu;
 
             // TODO: Add your update logic here
+            
+            switch(state)
+            {
+                case GameState.MainMenu:
+                    break;
+                case GameState.PlayGame:
+                    break;
+                case GameState.EndGame:
+                    break;
+            }
 
             base.Update(gameTime);
         }
@@ -120,6 +130,7 @@ namespace Game1
 
         public void DisplayPlayGame()
         {
+            spriteBatch.Draw(droneSprite, new Vector2(25, 25), Color.White);
 
         }
     }
