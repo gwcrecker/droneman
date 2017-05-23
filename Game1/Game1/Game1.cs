@@ -17,8 +17,6 @@ namespace Game1
 
         Texture2D droneSprite;
         Vector2 dronePosition;
-
-        Vector2 dronePosition;
         Vector2 droneSpeed;
         
 
