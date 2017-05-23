@@ -87,6 +87,8 @@ namespace Game1
                     dronePosition.Y = 25;
                     gravity.Y = 10;
 
+
+
                     break;
                 case GameState.EndGame:
                     break;
