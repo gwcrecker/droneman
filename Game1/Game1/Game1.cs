@@ -80,12 +80,27 @@ namespace Game1
             GraphicsDevice.Clear(Color.LemonChiffon );
 
             // TODO: Add your drawing code here
+            
+
+
+
             spriteBatch.Draw(droneSprite,dronePosition, Color.White);
 
-            spriteBatch.DrawString(font1, "Sponsored by Recker Aerial Images, LLC", new Vector2(400, 50), Color.Black);
+           
 
             spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+        public void MainMenu()
+        {
+            spriteBatch.DrawString(font1, "Drone Simulator 2017", new Vector2(100, 50), Color.Black);
+
+        }
+
+        public void EndGame()
+        {
+
         }
     }
 }
