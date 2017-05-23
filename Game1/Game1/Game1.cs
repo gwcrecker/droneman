@@ -26,7 +26,7 @@ namespace Game1
             PlayGame,
             EndGame
         }
-        //GamePadState state = GamePadState.MainMenu
+        GameState state = GameState.MainMenu;
 
 
         public Game1()
@@ -81,7 +81,20 @@ namespace Game1
 
             // TODO: Add your drawing code here
             
+            switch (state)
+            {
+                case GameState.MainMenu:
+                    DisplayMainMenu();
+                    break;
 
+                case GameState.PlayGame:
+                    DisplayPlayGame();
+                    break;
+
+                case GameState.EndGame:
+                    DisplayMainMenu();
+                    break;
+            }
 
 
             spriteBatch.Draw(droneSprite,dronePosition, Color.White);
@@ -92,13 +105,18 @@ namespace Game1
             base.Draw(gameTime);
         }
 
-        public void MainMenu()
+        public void DisplayMainMenu()
         {
             spriteBatch.DrawString(font1, "Drone Simulator 2017", new Vector2(100, 50), Color.Black);
 
         }
 
-        public void EndGame()
+        public void DisplayEndGame()
+        {
+
+        }
+
+        public void DisplayPlayGame()
         {
 
         }
