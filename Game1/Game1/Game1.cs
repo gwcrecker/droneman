@@ -23,14 +23,7 @@ namespace Game1
 
         SpriteFont font1;
 
-        enum GameState
-        {
-            MainMenu,
-            PlayGame,
-            EndGame
-        }
-        //GamePadState state = GamePadState.MainMenu
-
+       
 
         public Game1()
         {
@@ -95,15 +88,6 @@ namespace Game1
             base.Draw(gameTime);
         }
 
-        public void MainMenu()
-        {
-            spriteBatch.DrawString(font1, "Drone Simulator 2017", new Vector2(100, 50), Color.Black);
-
-        }
-
-        public void EndGame()
-        {
-
-        }
+      
     }
 }
