@@ -16,9 +16,12 @@ namespace Game1
         //add all rectangles, Texture2D, and variables here
 
         Texture2D droneSprite;
+
         Vector2 dronePosition;
         Vector2 droneSpeed;
         
+
+        SpriteFont font1;
 
         enum GameState
         {
@@ -26,7 +29,7 @@ namespace Game1
             PlayGame,
             EndGame
         }
-        //GamePadState state = GamePadState.MainMenu;
+        //GamePadState state = GamePadState.MainMenu
 
 
         public Game1()
@@ -50,6 +53,9 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             droneSprite = Content.Load<Texture2D>("drone");
 
+
+            //fonts
+            font1 = Content.Load<SpriteFont>("font1");
         }
 
         protected override void UnloadContent()
@@ -77,9 +83,27 @@ namespace Game1
             GraphicsDevice.Clear(Color.LemonChiffon );
 
             // TODO: Add your drawing code here
-            spriteBatch.Draw(droneSprite,dronePosition, Color.White); 
+            
+
+
+
+            spriteBatch.Draw(droneSprite,dronePosition, Color.White);
+
+           
+
             spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+        public void MainMenu()
+        {
+            spriteBatch.DrawString(font1, "Drone Simulator 2017", new Vector2(100, 50), Color.Black);
+
+        }
+
+        public void EndGame()
+        {
+
         }
     }
 }

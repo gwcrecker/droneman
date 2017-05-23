@@ -25,3 +25,9 @@
 /processorParam:TextureFormat=Color
 /build:drone.png
 
+#begin font1.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:font1.spritefont
+
