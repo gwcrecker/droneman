@@ -20,7 +20,7 @@ namespace Game1
         Vector2 droneYSpeed;
         Vector2 gravity;
         Vector2 droneXSpeed;
-    
+
 
 
 
@@ -70,7 +70,8 @@ namespace Game1
         protected override void Update(GameTime gameTime)
         {
 
-
+            Rectangle DroneCollision1 = new Rectangle((int)dronePosition.X, (int)dronePosition.Y, droneSprite.Width, droneSprite.Height);
+            Rectangle DroneCollision2 = new Rectangle((int)dronePosition.X + droneSprite.Width/2, (int)dronePosition.Y +5, droneSprite.Width-10, droneSprite.Height- 30);
             // TODO: Add your update logic here
             // GameState.MainMenu;
 
