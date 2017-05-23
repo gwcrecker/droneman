@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;    
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -16,6 +17,8 @@ namespace Game1
 
         Texture2D droneSprite;
         Vector2 dronePosition;
+        Vector2 droneSpeed;
+        
 
         enum GameState
         {
@@ -57,10 +60,10 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
 
-           // GameState.MainMenu;
+
+            // TODO: Add your update logic here
+            // GameState.MainMenu;
 
             // TODO: Add your update logic here
 
